@@ -1,3 +1,7 @@
+/**
+ * Simple Wrapper around the Error class allowing us to give it a name that will
+ * later be treated as some kind of a union.
+ */
 export class NamedError<T extends string = ""> extends Error {
   public readonly name: T;
 
@@ -7,7 +11,7 @@ export class NamedError<T extends string = ""> extends Error {
   }
 }
 
-/** Util in case you just want to return a single {@link NamedError} instance */
+/** Util in case you just want to return a single {@link NamedError} instance. */
 export function namedError<T extends string>(
   name: T,
   messageOrError?: unknown,
@@ -28,7 +32,7 @@ export function drDispatchErr<T extends string>(namedErr: NamedError<T>) {
 }
 
 /**
- * Returns an "error" Tuple
+ * Returns an "error" Tuple.
  *
  * @param name An arbitrary value for the name of the {@link NamedError}
  * @param messageOrError Arbitrary message or Error to add to the {@link NamedError}
@@ -41,7 +45,7 @@ export function drErr<T extends string>(name: T, messageOrError?: unknown) {
 }
 
 /**
- * Returns a "success" Tuple
+ * Returns a "success" Tuple.
  *
  * @param response Anything you want
  * @returns - [0]Response => response
