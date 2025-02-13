@@ -1,6 +1,6 @@
 {
   "name": "d-return",
-  "version": "1.0.1",
+  "version": "1.0.12",
   "description": "Golang style err&res return with type inference.\n Cumtom Named Error to know at a glance what could have gone wrong along the way",
   "license": "ISC",
   "author": "victorhazebrouck",
@@ -10,12 +10,14 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md,html,css,scss}\"",
-    "publish": "npm publish"
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.13.2",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3",
-    "prettier": "^3.5.0"
+    "typescript": "^5.7.3"
   }
 }
