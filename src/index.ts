@@ -8,7 +8,10 @@ export class NamedError<T extends string = ""> extends Error {
 }
 
 /** Util in case you just want to return a single {@link NamedError} instance */
-export function namedError<T extends string>(name: T, messageOrError?: unknown) {
+export function namedError<T extends string>(
+  name: T,
+  messageOrError?: unknown,
+) {
   return new NamedError(name, messageOrError);
 }
 

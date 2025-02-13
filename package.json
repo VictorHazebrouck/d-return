@@ -1,18 +1,21 @@
 {
-    "name": "d-return",
-    "version": "1.0.1",
-    "description": "Golang style err&res return with type inference.\n Cumtom Named Error to know at a glance what could have gone wrong along the way",
-    "license": "ISC",
-    "author": "",
-    "type": "commonjs",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsc"
-    },
-    "devDependencies": {
-        "@types/node": "^22.13.2",
-        "ts-node": "^10.9.2",
-        "typescript": "^5.7.3"
-    }
+  "name": "d-return",
+  "version": "1.0.1",
+  "description": "Golang style err&res return with type inference.\n Cumtom Named Error to know at a glance what could have gone wrong along the way",
+  "license": "ISC",
+  "author": "victorhazebrouck",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md,html,css,scss}\"",
+    "publish": "npm publish"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "prettier": "^3.5.0"
+  }
 }
