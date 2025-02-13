@@ -1,7 +1,7 @@
 {
   "name": "d-return",
-  "version": "1.0.12",
-  "description": "Golang style err&res return with type inference.\n Cumtom Named Error to know at a glance what could have gone wrong along the way",
+  "version": "1.0.13",
+  "description": "Golang style err & res return with type inference.\n Cumtom Named Error to know at a glance what could have gone wrong along the way",
   "license": "ISC",
   "author": "victorhazebrouck",
   "type": "module",
