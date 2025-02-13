@@ -5,6 +5,10 @@ exports.namedError = namedError;
 exports.drDispatchErr = drDispatchErr;
 exports.drErr = drErr;
 exports.drRes = drRes;
+/**
+ * Simple Wrapper around the Error class allowing us to give it a name that will
+ * later be treated as some kind of a union.
+ */
 class NamedError extends Error {
     constructor(name, messageOrError) {
         super(messageOrError);
@@ -12,7 +16,7 @@ class NamedError extends Error {
     }
 }
 exports.NamedError = NamedError;
-/** Util in case you just want to return a single {@link NamedError} instance */
+/** Util in case you just want to return a single {@link NamedError} instance. */
 function namedError(name, messageOrError) {
     return new NamedError(name, messageOrError);
 }
@@ -28,7 +32,7 @@ function drDispatchErr(namedErr) {
     return [null, namedErr];
 }
 /**
- * Returns an "error" Tuple
+ * Returns an "error" Tuple.
  *
  * @param name An arbitrary value for the name of the {@link NamedError}
  * @param messageOrError Arbitrary message or Error to add to the {@link NamedError}
@@ -40,7 +44,7 @@ function drErr(name, messageOrError) {
     return [null, err];
 }
 /**
- * Returns a "success" Tuple
+ * Returns a "success" Tuple.
  *
  * @param response Anything you want
  * @returns - [0]Response => response

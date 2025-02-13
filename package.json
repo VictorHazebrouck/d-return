@@ -4,7 +4,7 @@
   "description": "Golang style err&res return with type inference.\n Cumtom Named Error to know at a glance what could have gone wrong along the way",
   "license": "ISC",
   "author": "victorhazebrouck",
-  "type": "commonjs",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,9 +17,11 @@
   "devDependencies": {
     "@types/node": "^22.13.2",
     "eslint": "^9.20.1",
+    "eslint-plugin-react": "^7.37.4",
     "husky": "^9.1.7",
     "prettier": "^3.5.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0"
   }
 }
